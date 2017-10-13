@@ -8,7 +8,7 @@ public class Course {
 	private ArrayList<Subjects> Subjects;
 	private String CourseName;
 	private String CourseCode;
-	private ArrayList<Student> Students;
+	private ArrayList<Student> Student;
 	private LocalDate StartDate;
 	private LocalDate EndDate;
 	
@@ -19,12 +19,13 @@ public class Course {
 		this.StartDate = Start;
 		this.EndDate = End;
 		Subjects = new ArrayList<Subjects>();
-		//Students = new ArrayList<Student>();
+		Student = new ArrayList<Student>();
 		
 		
 	}
 	
 	public void addSubject(Subjects sub1){
+		Student.addAll(sub1.getStudent());
 		Subjects.add(sub1);
 	}
 	
@@ -57,12 +58,12 @@ public class Course {
 		this.CourseName = CourseName;	
 	}
 	
-	public ArrayList<Student> getStudents() {
-        return Students;
+	public void addStudent(Student s1) {
+        Student.add(s1);
     }
-
-    public void setStudents(ArrayList<Student> Student) {
-        this.Students = Student;
+	
+	public ArrayList<Student> getStudents() {
+        return getStudents();
     }
     
     public LocalDate getStartDate() {

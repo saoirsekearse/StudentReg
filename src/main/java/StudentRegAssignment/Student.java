@@ -25,5 +25,9 @@ public class Student {
 	public String getDOB() {
 		return this.DOB;
 	}
+	
+	public String toString() {
+        return "Student Name: " + this.Name + " Username: " + this.StudentUsername + "DOB:" + this.DOB;
+    }
 
 }
