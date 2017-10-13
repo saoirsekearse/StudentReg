@@ -7,11 +7,11 @@ public class StudentRegTest extends TestCase {
 
 	public void testGetUserName() {
 		
-		String StudentName = "Saoirse Kearse";
-		int StudentID = 114417498;
-		String expected = StudentID + "@NUIGALWAY.IE";
+		//String StudentName = "Saoirse Kearse";
+		double StudentUsername = 114417498;
+		double expected = StudentUsername;
 		Student Student = new Student("Saoirse","30/08/1997",14417498);
-		String actual = Student.getStudentUsername();
+		double actual = Student.getStudentUsername();
 		assertEquals(expected,actual);
     }
 	

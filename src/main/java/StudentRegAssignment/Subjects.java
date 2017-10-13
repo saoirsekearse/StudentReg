@@ -9,36 +9,26 @@ public class Subjects {
 	private String SubjectName;
 	private String SubjectCode;
 	private static int SubjectNumber = 455;
-	private ArrayList Student;
+	private ArrayList<Student> Student;
 	
 	public Subjects(String SubjectName){
+		
 		this.SubjectName = SubjectName;
 		this.SubjectCode = "EE" + SubjectNumber;
-		this.Student = new ArrayList(); 
+		Student = new ArrayList<Student>(); 
 		SubjectNumber++;
+		
 	}
 
-	private String getSubjectCode() {
-        return this.SubjectCode;
-    }
-
-    private String getSubjectName() {
-        return this.SubjectName;
-    }
-
-    public void addStudent(Student s) {
-        Student.add(s);
-    }
-
-    public void setStudent(ArrayList<Student> s) {
-        this.Student = s;
+	public void addStudent(Student s1) {
+        Student.add(s1);
     }
 
     public ArrayList<Student> getStudent() {
-        return this.Student;
+        return Student;
     }
 
     public String toString() {
-        return "Subject Code: " + this.SubjectCode + " Title: " + this.SubjectName;
+        return "Subject Code: " + this.SubjectCode + " Subject: " + this.SubjectName;
     }
 }

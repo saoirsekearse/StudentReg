@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Course {
 
-	private ArrayList Subjects;
+	private ArrayList<Subjects> Subjects;
 	private String CourseName;
 	private String CourseCode;
 	private ArrayList<Student> Students;
@@ -18,24 +18,14 @@ public class Course {
 		this.CourseCode = CourseCode;
 		this.StartDate = Start;
 		this.EndDate = End;
-		Subjects = new ArrayList();
-		Students = new ArrayList<Student>();
+		Subjects = new ArrayList<Subjects>();
+		//Students = new ArrayList<Student>();
 		
 		
 	}
 	
-	public void addSubject(Subjects Subject){
-		Subjects.add(Subject);
-	}
-	
-	public void RegisterStudent(Student Student){
-		Students.add(Student);
-		Student.setCourse(this);
-		Student.setSubjects(Subjects);
-		
-		for(Subjects Subject:Student.getSubjects()){
-			Subject.addStudent(Student);
-		}
+	public void addSubject(Subjects sub1){
+		Subjects.add(sub1);
 	}
 	
 	public String toString() {
@@ -43,11 +33,11 @@ public class Course {
     }
 	
 
-	public ArrayList getSubjects() {
+	public ArrayList<Subjects> getSubjects() {
 		return Subjects;
 	}
 
-	public void setSubjects(ArrayList Subject) {
+	public void setSubjects(ArrayList<Subjects> Subject) {
 		this.Subjects = Subject;
 	}
 
